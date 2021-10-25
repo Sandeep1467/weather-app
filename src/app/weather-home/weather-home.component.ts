@@ -15,6 +15,8 @@ export class WeatherHomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    alert("Welcome")
+    console.log("ngOnInit from WeatherComponent");
   }
   
   getWeather(){
