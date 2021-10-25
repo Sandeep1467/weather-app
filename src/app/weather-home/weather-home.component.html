@@ -1,0 +1,20 @@
+<div class="app-main">
+    <div class="searchInputBox">
+        <input [(ngModel)]="city" type="text" class="input-box" placeholder="Enter City name.."><br>
+        <button type="button" class="btn" (click) = "getWeather()">Search</button>
+    </div>
+    <div class="weather-body" *ngIf="weather">
+        <div class="location-details">
+            <h3>Weather</h3>
+            <div class="City" id="City">{{weather.name}} {{weather.sys.country}}</div>
+        </div>
+        <div class="weather-details">
+            <div class="temp">{{weather.main.temp-273.15|number:'1.0-0'}}&deg;C</div>
+            <div class="feel">feels_like: {{weather.main.feels_like-281.86 | number: '1.0-0'}}</div>
+            <!-- <div class="weather_icon">{{weather.weather.icon}}</div> -->
+            <div class="min-max">Min: {{weather.main.temp_min-273.15 | number: '1.0-0'}}&deg;C /
+                Max: {{weather.main.temp_max-273.15 | number: '1.0-0'}}&deg;C </div>
+            <div class="weather">Weather: {{weather.weather[0].main}}</div>
+        </div>
+    </div>
+</div>
