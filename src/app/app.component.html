@@ -1,2 +1,2 @@
-<app-weather-home (newCoord)="setMapCoordinates($event)"></app-weather-home>
+<app-weather-home (newCoord)="setMapCoordinates($event)" [city]="formattedAddress"></app-weather-home>
 <div #mapContainer id="map"></div>
