@@ -1,2 +1,11 @@
-<app-weather-home (newCoord)="setMapCoordinates($event)" [city]="formattedAddress"></app-weather-home>
+<app-weather-home
+ (newCoord)="setMapCoordinates($event)" 
+ (sourceMarker)="getSourceMarker($event)"
+ (destinationMarker)="getDestinationMarker($event)"
+ (searchClick)="showDirection()"
+  [city]="formattedAddress"> 
+</app-weather-home>
+<div id="demo"></div>
+<button #myBtn>Click me</button>
+<!-- <button type="button" (click)="showDirection()"> Show Direction</button> -->
 <div #mapContainer id="map"></div>

@@ -1,8 +1,11 @@
 <div class="app-main">
     <div class="searchInputBox">
-        <input [(ngModel)]="city" #addresstext type="text" class="input-box" placeholder="Enter City name.." autocomplete="off"><br>
+        <input [(ngModel)]="city" #source type="text" class="input-box" placeholder="Enter Current Location.." autocomplete="off"><br>
+        <input [(ngModel)]="city2" #destination type="text" class="input-box2" placeholder="Enter Destination.." autocomplete="off"><br>
+
         <button type="button" class="btn" (click) = "getWeather()">Search</button>
     </div>
+
     <div class="weather-body" *ngIf="weather">
         <div class="location-details">
             <h3>Weather</h3>
